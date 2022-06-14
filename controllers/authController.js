@@ -6,12 +6,9 @@ const Course = require("../models/Course");
 exports.createUser = async (req, res) => {
   try {
     const user = await User.create(req.body);
-
-<<<<<<< HEAD
+    
     res.status(201).redirect("/login");
-=======
-    res.status(201).redirect('/login')
->>>>>>> 74ddf7f847a05f223a24229e09c5209980f34df5
+
   } catch (error) {
     res.status(400).json({
       status: "fail",

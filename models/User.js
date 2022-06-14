@@ -16,7 +16,6 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-<<<<<<< HEAD
     role:{
         type: String,
         enum:["student", "teacher", "admin"],
@@ -26,13 +25,6 @@ const UserSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Course'
     }]
-=======
-    role: {
-        type: String,
-        enum: ["student", "teacher", "admin"],
-        default: "student"
-    }
->>>>>>> 74ddf7f847a05f223a24229e09c5209980f34df5
 });
 
 UserSchema.pre('save', function(next) {

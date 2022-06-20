@@ -1,8 +1,13 @@
-const express = require("express");
-const categoryController = require('../controllers/categoryController')
+const express=require('express')
 
-const router = express.Router();
+const categoryController =require('../controllers/categoryController')
 
-router.route('/').post(categoryController.createCategory);
 
-module.exports = router
+const router=express.Router();
+
+router.route('/').post(categoryController.createCategory) //http://localhost:3000/categories
+
+
+
+
+module.exports=router

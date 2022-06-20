@@ -1,26 +1,29 @@
 {
   "name": "smartedu",
   "version": "1.0.0",
-  "description": "Education Portal",
+  "description": "Educational Portal",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
   "keywords": [
     "education",
-    "portal",
+    "portalinode.js",
     "node.js"
   ],
-  "author": "Cihan Alıcı",
+  "author": "umut bozbek",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.6.0",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
-    "mongoose": "^6.3.5",
+    "express-validator": "^6.14.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.3.6",
     "nodemailer": "^6.7.5",
     "slugify": "^1.6.5"
   },

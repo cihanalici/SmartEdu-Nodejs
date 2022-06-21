@@ -13,7 +13,7 @@ const app = express();
 
 
 // Connect DB
-mongoose.connect('mongodb://0.0.0.0:27017/smartedu-db')
+mongoose.connect('mongodb+srv://cihan:Deadburn00.@cluster0.nsgfb.mongodb.net/smartedu-db?retryWrites=true&w=majority')
     .then(() => {
         console.log('DB Connected Successfuly');
     })
@@ -71,7 +71,7 @@ app.use('/users', userRoute)
 
 
 
-const port = 3000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log(`App started on port ${port}`);
 })

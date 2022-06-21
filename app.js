@@ -39,7 +39,7 @@ app.use(session({
     secret: 'my_keyboard_cat',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: 'mongodb://0.0.0.0:27017/smartedu-db' }),
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://cihan:Deadburn00.@cluster0.nsgfb.mongodb.net/smartedu-db?retryWrites=true&w=majority' }),
 
 
 }))

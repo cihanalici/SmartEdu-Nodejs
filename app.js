@@ -13,7 +13,7 @@ const app = express();
 
 
 // Connect DB
-mongoose.connect('mongodb+srv://cihan:Deadburn00.@cluster0.nsgfb.mongodb.net/smartedu-db?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGO_STR)
     .then(() => {
         console.log('DB Connected Successfuly');
     })
@@ -39,7 +39,7 @@ app.use(session({
     secret: 'my_keyboard_cat',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: 'mongodb+srv://cihan:Deadburn00.@cluster0.nsgfb.mongodb.net/smartedu-db?retryWrites=true&w=majority' }),
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_STR }),
 
 
 }))

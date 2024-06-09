@@ -4,20 +4,23 @@
   "description": "Educational Portal",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "mongo": "docker run --name my-mongo -p 27017:27017 -d mongo"
   },
   "keywords": [
     "education",
     "portalinode.js",
     "node.js"
   ],
-  "author": "umut bozbek",
+  "author": "Cihan Alıcı",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.6.0",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-session": "^1.17.3",

@@ -1,0 +1,21 @@
+services:
+  mongo_db:
+    container_name: database_container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+
+  app:
+    build: .
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGO_STR=mongodb://mongo_db:27017/smartedu-db
+    depends_on:
+      - mongo_db
+
+volumes:
+  mongo_db: {}

@@ -8,6 +8,7 @@ const pageRoute = require('./routes/pageRoute')
 const courseRoute = require('./routes/courseRoute')
 const categoryRoute = require('./routes/categoryRoute')
 const userRoute = require('./routes/userRoute')
+require('dotenv').config()
 
 const app = express();
 
